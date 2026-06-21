@@ -83,7 +83,11 @@ export const definitions: DefinitionWithExtend[] = [
         model: "40473",
         vendor: "Müller Licht",
         description: "Tint LED white+color",
-        extend: [mullerLichtLight({colorTemp: {range: [153, 556]}, color: true}), m.forcePowerSource({powerSource: "Battery"})],
+        extend: [
+            mullerLichtLight({colorTemp: {range: [153, 556]}, color: true}),
+            m.forcePowerSource({powerSource: "Battery"}),
+            m.forceDeviceType({type: "EndDevice"}),
+        ],
     },
     {
         zigbeeModel: ["tint-ExtendedColor"],
