@@ -79,6 +79,13 @@ export const definitions: DefinitionWithExtend[] = [
         extend: [mullerLichtLight({colorTemp: {range: [153, 556]}, color: true})],
     },
     {
+        fingerprint: [{modelID: "tint-ExtendedColor", manufacturerName: "MLI", softwareBuildID: "MSOLA501"}],
+        model: "40473",
+        vendor: "Müller Licht",
+        description: "Tint LED white+color",
+        extend: [mullerLichtLight({colorTemp: {range: [153, 556]}, color: true}), m.forcePowerSource({powerSource: "Battery"})],
+    },
+    {
         zigbeeModel: ["tint-ExtendedColor"],
         model: "404036/45327/45317/45328",
         vendor: "Müller Licht",
